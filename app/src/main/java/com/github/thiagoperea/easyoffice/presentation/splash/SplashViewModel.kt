@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 class SplashViewModel : ViewModel() {
 
@@ -13,9 +12,9 @@ class SplashViewModel : ViewModel() {
 
     fun loadResources() {
         viewModelScope.launch {
-            delay(3000)
+            delay(2000)
 
-            val isUserLoggedIn = Random.nextBoolean()
+            val isUserLoggedIn = false
 
             if (isUserLoggedIn) {
                 splashState.emit(SplashState.UserLoggedIn)

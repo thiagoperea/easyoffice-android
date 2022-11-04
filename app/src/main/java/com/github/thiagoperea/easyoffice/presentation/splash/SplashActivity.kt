@@ -3,14 +3,12 @@ package com.github.thiagoperea.easyoffice.presentation.splash
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.github.thiagoperea.easyoffice.databinding.ActivitySplashBinding
 import com.github.thiagoperea.easyoffice.presentation.login.LoginActivity
 import com.github.thiagoperea.easyoffice.presentation.main.MainActivity
-import kotlinx.coroutines.flow.collect
 
 class SplashActivity : AppCompatActivity() {
 
@@ -46,7 +44,6 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun showLoading() {
-        Toast.makeText(this, "show loading", Toast.LENGTH_SHORT).show()
         binding.progress.visibility = View.VISIBLE
     }
 
